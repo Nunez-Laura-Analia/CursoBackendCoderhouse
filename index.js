@@ -42,10 +42,13 @@ const libros = [
   },
   {
     nombre: "libro3",
-    autor: "autor"
+    autor: "autor3"
   }
 ];
 
 const mascotas = ["mascota1", "mascota2", "mascota3"];
 
 let usuario1 = new Usuario("nombreX", "apellidoX", libros, mascotas);
+
+usuario1.addBook("libro4", "autor4")
+usuario1.addMascota("mascota4")
