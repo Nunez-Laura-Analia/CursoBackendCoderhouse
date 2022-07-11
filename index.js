@@ -5,20 +5,41 @@ class Usuario {
     this.libros = libros;
     this.mascotas = mascotas;
   }
+  
+  getFullName() {
+    return this.nombre;
+  }
+
+  addMascota(mascotaNueva) {
+    return [...mascotas, mascotaNueva];
+  }
+
+  countMascotas() {
+    let cantidadDeMascotas = this.mascotas.length;
+    return cantidadDeMascotas;
+  }
+
+  addBook(nombreLibro, autorLibro) {
+    const libroNuevo = { nombre: nombreLibro, autor: autorLibro };
+    return [...libros, libroNuevo];
+  }
+
+  getBookNames() {
+    return this.libros.nombre;
+  }
 }
 
 const libros = [
   {
-    libro1: "libro1",
-    libro2: "libro2",
-    libro3: "libro3",
+    nombre: "libro1",
+    autor: "autor1"
   },
+  {
+    nombre: "libro2",
+    autor: "autor2"
+  }
 ];
 
-let usuario1 = new Usuario("nombreX", "apellidoX", libros, [
-  "mascota1",
-  "mascota2",
-  "mascota2",
-]);
+const mascotas = ["mascota1", "mascota2", "mascota3"];
 
-console.log(usuario1);
+let usuario1 = new Usuario("nombreX", "apellidoX", libros, mascotas);
