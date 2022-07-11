@@ -11,11 +11,11 @@ class Usuario {
   }
 
   addMascota(mascotaNueva) {
-    return [...mascotas, mascotaNueva];
+    return [...this.mascotas, mascotaNueva];
   }
 
   countMascotas() {
-    let cantidadDeMascotas = this.mascotas.length;
+    let cantidadDeMascotas = mascotas.length;
     return cantidadDeMascotas;
   }
 
@@ -25,7 +25,9 @@ class Usuario {
   }
 
   getBookNames() {
-    return this.libros.nombre;
+    for (let i = 0; i < libros.length; i++){
+      return libros[i].nombre
+    }
   }
 }
 
@@ -37,9 +39,15 @@ const libros = [
   {
     nombre: "libro2",
     autor: "autor2"
+  },
+  {
+    nombre: "libro3",
+    autor: "autor"
   }
 ];
 
 const mascotas = ["mascota1", "mascota2", "mascota3"];
 
 let usuario1 = new Usuario("nombreX", "apellidoX", libros, mascotas);
+
+console.log(usuario1.getBookNames());
