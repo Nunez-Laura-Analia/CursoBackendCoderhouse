@@ -49,5 +49,3 @@ const libros = [
 const mascotas = ["mascota1", "mascota2", "mascota3"];
 
 let usuario1 = new Usuario("nombreX", "apellidoX", libros, mascotas);
-
-console.log(usuario1.getBookNames());
