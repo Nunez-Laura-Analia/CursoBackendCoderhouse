@@ -15,8 +15,7 @@ class Usuario {
   }
 
   countMascotas() {
-    let cantidadDeMascotas = mascotas.length;
-    return cantidadDeMascotas;
+    return mascotas.length;
   }
 
   addBook(nombreLibro, autorLibro) {
@@ -25,8 +24,8 @@ class Usuario {
   }
 
   getBookNames() {
-    for (let i = 0; i < libros.length; i++){
-      return libros[i].nombre
+    for (let i = 0; i < this.libros.length; i++){
+      return this.libros[i].nombre
     }
   }
 }
@@ -52,3 +51,5 @@ let usuario1 = new Usuario("nombreX", "apellidoX", libros, mascotas);
 
 usuario1.addBook("libro4", "autor4")
 usuario1.addMascota("mascota4")
+
+console.log(usuario1.countMascotas())
